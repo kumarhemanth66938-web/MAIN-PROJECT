@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentTrack | Sports Talent Discovery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2>🏆 TalentTrack</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#players">Athletes</a>
+    <a href="#register">Register</a>
+    <a href="#scouts">Scouts</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <p class="tagline">LOCAL TALENT • BIG OPPORTUNITIES</p>
+    <h1>Talent deserves<br><span>to be discovered.</span></h1>
+    <p>Connect local athletes with coaches, sports academies and scouts.</p>
+    <a href="#register" class="btn">Register as Athlete</a>
+    <a href="#players" class="btn secondary">Discover Players</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div><h2 id="totalPlayers">0</h2><p>Athletes</p></div>
+  <div><h2 id="totalSports">0</h2><p>Sports</p></div>
+  <div><h2 id="totalShortlisted">0</h2><p>Shortlisted</p></div>
+</section>
+
+<section class="section" id="players">
+  <h2>Discover Athletes</h2>
+  <p>Explore local sports talent and find promising players.</p>
+
+  <div class="filters">
+    <input id="search" placeholder="Search player or location">
+    <select id="sportFilter">
+      <option value="">All Sports</option>
+      <option>Football</option>
+      <option>Cricket</option>
+      <option>Basketball</option>
+      <option>Badminton</option>
+      <option>Athletics</option>
+      <option>Volleyball</option>
+      <option>Hockey</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="player-grid" id="playerList"></div>
+</section>
+
+<section class="section register-section" id="register">
+  <h2>Register as an Athlete</h2>
+  <p>Create your profile and get discovered by coaches and scouts.</p>
+
+  <form id="registrationForm">
+    <input name="name" placeholder="Full Name" required>
+    <input name="age" type="number" placeholder="Age" min="8" max="60" required>
+
+    <select name="sport" required>
+      <option value="">Select Sport</option>
+      <option>Football</option>
+      <option>Cricket</option>
+      <option>Basketball</option>
+      <option>Badminton</option>
+      <option>Athletics</option>
+      <option>Volleyball</option>
+      <option>Hockey</option>
+      <option>Other</option>
+    </select>
+
+    <input name="position" placeholder="Position / Event" required>
+    <input name="location" placeholder="City / District" required>
+    <input name="experience" type="number" placeholder="Experience (years)" min="0">
+
+    <input name="height" type="number" placeholder="Height (cm)">
+    <input name="achievement" placeholder="Achievement / Personal Best">
+
+    <textarea name="bio" placeholder="Describe your skills, experience and goals"></textarea>
+
+    <button type="submit">Create Athlete Profile</button>
+  </form>
+  <p id="message"></p>
+</section>
+
+<section class="section scout-section" id="scouts">
+  <h2>Scout & Coach Dashboard</h2>
+  <p>Discover athletes, review player profiles, and shortlist talent for your team or academy.</p>
+  <div class="scout-box">
+    <h3>Find Your Next Player</h3>
+    <p>Search athletes by sport, age, playing position, or location.</p>
+    <a href="#players" class="btn">Explore Athletes</a>
+  </div>
+</section>
+
+<footer>
+  <h3>TalentTrack</h3>
+  <p>Connecting local talent with sporting opportunities.</p>
+  <p>© 2026 TalentTrack Sports Network</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
